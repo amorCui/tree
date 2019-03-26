@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./tree.css">
+    <script src="./tree.js"></script>
+    <style type="text/css">
+        canvas { border: 1px solid white; }
+    </style>
+</head>
+<body>
+
+    <div style="line-height: 20px;">
+        <canvas id="canvas" class="canvas" width="1250" height="800"></canvas>
+    </div>
+    
+
+
+    <script type="text/javascript">
+  
+         var t = tree('#canvas').init({
+            pen:{
+                color:'red',
+                outline:'blue'
+            },
+            data:[
+                {
+                    angle:'45',    //和垂直方向的角度
+                    length:'200',     //长度
+                    color:'#00ff00',      //颜色
+                    type:'circle',       //类型
+                    text:'this is name1',       //文本信息
+                    img:null         //图片
+                },
+                {
+                    angle:'135',    //和垂直方向的角度
+                    length:'200',     //长度
+                    color:'#00ff00',      //颜色
+                    type:'circle',       //类型
+                    text:'this is name2',       //文本信息
+                    img:null         //图片
+                },
+                {
+                    angle:'60',    //和垂直方向的角度
+                    length:'200',     //长度
+                    color:'#00ff00',      //颜色
+                    type:'circle',       //类型
+                    text:'文本信息',       //文本信息
+                    img:null         //图片
+                }
+            ],
+            step:20,
+            minSpace:40,
+            maxSpace:200
+        });
+
+        console.log(t);
+    </script>
+</body>
+</html>
